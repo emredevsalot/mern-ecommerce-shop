@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
-import Rating from '../components/Rating'
-import { listProductDetails } from '../actions/productActions'
-import Loader from '../components/Loader'
-import Message from '../components/Message'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
+import Rating from '../components/Rating';
+import { listProductDetails } from '../actions/productActions';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
 
 const ProductScreen = ({ match }) => {
   //   // We get the product which has id of parameter :id
   //   const product = products.find((p) => p._id === match.params.id)
-  const dispatch = useDispatch()
-  const productDetails = useSelector((state) => state.productDetails)
-  const { loading, error, product } = productDetails
-
+  const dispatch = useDispatch();
+  const productDetails = useSelector((state) => state.productDetails);
+  const { loading, error, product } = productDetails;
+  //line
   useEffect(() => {
-    dispatch(listProductDetails(match.params.id))
-  }, [dispatch, match])
+    dispatch(listProductDetails(match.params.id));
+  }, [dispatch, match]);
 
   return (
     <>
@@ -83,7 +83,7 @@ const ProductScreen = ({ match }) => {
         </Row>
       )}
     </>
-  )
-}
+  );
+};
 
-export default ProductScreen
+export default ProductScreen;
