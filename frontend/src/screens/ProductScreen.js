@@ -16,7 +16,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 
 const ProductScreen = ({ history, match }) => {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
   //   // We get the product which has id of parameter :id
   //   const product = products.find((p) => p._id === match.params.id)
   const dispatch = useDispatch();
